@@ -102,7 +102,9 @@ public class User extends SuperEntity {
 	@Override
 	public String toString() {
 		return "User [username=" + username + ", password=" + password
-				+ ", email=" + email + ", phone=" + phone + ", id=" + id + "]";
+				+ ", email=" + email + ", phone=" + phone + ", enabled="
+				+ enabled + ", id=" + id + "]";
 	}
+
 	
 }

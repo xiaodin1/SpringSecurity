@@ -49,5 +49,11 @@ public class Role extends SuperEntity {
 	public void setAuthoritys(Set<Authority> authoritys) {
 		this.authoritys = authoritys;
 	}
+
+	@Override
+	public String toString() {
+		return "Role [roleName=" + roleName + ", authoritys=" + authoritys
+				+ "]";
+	}
 	
 }

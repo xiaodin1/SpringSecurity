@@ -58,7 +58,6 @@ public class ItemUserDetailsService implements UserDetailsService ,Serializable{
 			}
 		}
 		
-		
 		SecurityUser securityUser = new SecurityUser(username, password, enabled,
 			accountNonExpired, credentialsNonExpired, accountNonLocked, authorities, user);
 		

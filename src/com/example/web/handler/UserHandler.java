@@ -24,7 +24,6 @@ public class UserHandler {
 	public String list(@RequestParam(required=false,defaultValue="1") Integer pageNum, Map<String, Object> map) {
 		Page<User> page = userService.getPage(pageNum, 5);
 		map.put("page", page);
-		
 		return "user/list";
 	}
 	

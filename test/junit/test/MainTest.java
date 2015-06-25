@@ -6,6 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.security.authentication.encoding.Md5PasswordEncoder;
 
 import com.example.entity.User;
 import com.example.service.UserService;
@@ -18,6 +19,15 @@ public class MainTest {
 	public void init() {
 		context = new ClassPathXmlApplicationContext("applicationContext.xml");
 	}
+	
+	@Test
+	public void testPassword() {
+		UserService bean = context.getBean(UserService.class);
+		Md5PasswordEncoder encoder = new Md5PasswordEncoder();
+		User user = new User("lghuntfor", encoder.encodePassword("113113", "lghuntfor"), "lghuntfor@sina.com", "18615758182");
+		bean.save(user);
+	}
+	
 	
 	@Test
 	public void testSpring() {

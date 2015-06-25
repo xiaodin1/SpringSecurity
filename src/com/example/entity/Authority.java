@@ -65,6 +65,12 @@ public class Authority extends SuperEntity {
 	public void setUrl(String url) {
 		this.url = url;
 	}
-	
+
+
+	@Override
+	public String toString() {
+		return "Authority [name=" + name + ", displayName=" + displayName
+				+ ", url=" + url + "]";
+	}
 	
 }

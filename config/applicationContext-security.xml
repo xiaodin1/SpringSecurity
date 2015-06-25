@@ -8,7 +8,7 @@
              http://www.springframework.org/schema/security 
              http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 		
-	<security:http auto-config="true"  >
+	<security:http auto-config="true">
 		<security:form-login
 			login-page="/index.jsp"
 			login-processing-url="/security-login"
@@ -16,11 +16,11 @@
 			password-parameter="password"
 			authentication-failure-url="/index.jsp"
 			always-use-default-target="true"
-			default-target-url="/index.jsp"
+			default-target-url="/user/list"
 			/>
 		<security:logout
 			logout-url="/security-logout"
-			logout-success-url="/user/list"
+			logout-success-url="/"
 			invalidate-session="true"
 			/>
 
